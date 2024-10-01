@@ -1,0 +1,26 @@
+{
+  "name": "miz-vue-ele",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "quxiaodong",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quxiaodong/Miz-Vue-Ele.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.1.8"
+  },
+  "license": "MIT"
+}
