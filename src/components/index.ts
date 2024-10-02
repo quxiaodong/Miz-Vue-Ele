@@ -3,6 +3,8 @@ import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import { App } from 'vue'
 import CommonDark from './common-dark/Index.vue'
+import { createDialog } from './common-dialog/index'
+import CommonDialog from './common-dialog/Index.vue'
 import { CommonIcons } from './common-icon'
 import CommonLocale from './common-locale/Index.vue'
 
@@ -13,6 +15,8 @@ const components = (app: App) => {
   }
   app.component('CommonLocale', CommonLocale)
   app.component('CommonDark', CommonDark)
+  createDialog._context = app._context
+  app.component('CommonDialog', CommonDialog)
 }
 
 export default components
