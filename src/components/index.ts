@@ -5,6 +5,7 @@ import CommonDark from './common-dark/Index.vue'
 import CommonDialog from './common-dialog/Index.vue'
 import CommonForm from './common-form/Index.vue'
 import CommonLocale from './common-locale/Index.vue'
+import CommonSearch from './common-search/Index.vue'
 
 const components = (app: App) => {
   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -15,6 +16,7 @@ const components = (app: App) => {
   app.component('CommonLocale', CommonLocale)
   app.component('CommonDialog', CommonDialog)
   app.component('CommonForm', CommonForm)
+  app.component('CommonSearch', CommonSearch)
 }
 
 export default components
