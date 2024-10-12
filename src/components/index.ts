@@ -10,6 +10,8 @@ import CommonForm from './common-form/Index.vue'
 import { CommonIcons } from './common-icon'
 import CommonLocale from './common-locale/Index.vue'
 import CommonSearch from './common-search/Index.vue'
+import CommonTable from './common-table/Index.vue'
+import WidgetTable from './common-table/table/Index.vue'
 
 const components = (app: App) => {
   app.use(ElementPlus)
@@ -23,6 +25,8 @@ const components = (app: App) => {
   app.component('CommonForm', CommonForm)
   app.component('CommonSearch', CommonSearch)
   app.component('CommonCropper', CommonCropper)
+  app.component('CommonTable', CommonTable)
+  app.component('WidgetTable', WidgetTable)
 }
 
 export default components
