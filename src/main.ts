@@ -3,6 +3,7 @@ import CommonDialog from '@/components/common-dialog/Index.vue'
 import CommonForm from '@/components/common-form/Index.vue'
 import CommonLocale from '@/components/common-locale/Index.vue'
 import CommonSearch from '@/components/common-search/Index.vue'
+import CommonTable from '@/components/common-table/Index.vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import ElementPlus from 'element-plus'
 import { createPinia } from 'pinia'
@@ -25,4 +26,5 @@ app.component('CommonLocale', CommonLocale)
 app.component('CommonDialog', CommonDialog)
 app.component('CommonForm', CommonForm)
 app.component('CommonSearch', CommonSearch)
+app.component('CommonTable', CommonTable)
 app.mount('#app')
