@@ -1,4 +1,5 @@
 import CommonDark from '@/components/common-dark/Index.vue'
+import CommonLocale from '@/components/common-locale/Index.vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import ElementPlus from 'element-plus'
 import { createPinia } from 'pinia'
@@ -17,4 +18,5 @@ app.use(createPinia())
 app.use(router)
 Object.values(plugins).forEach(plugin => app.use(plugin))
 app.component('CommonDark', CommonDark)
+app.component('CommonLocale', CommonLocale)
 app.mount('#app')
