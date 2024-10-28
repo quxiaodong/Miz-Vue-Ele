@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  envDir: resolve(__dirname, './env'),
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
