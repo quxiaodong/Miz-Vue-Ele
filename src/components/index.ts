@@ -1,5 +1,4 @@
 import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import { App } from 'vue'
 import CommonCropper from './common-cropper/Index.vue'
@@ -21,8 +20,11 @@ import WidgetStatusFilter from './common-widget/StatusFilter.vue'
 import WidgetSubmit from './common-widget/Submit.vue'
 import WidgetUpdate from './common-widget/Update.vue'
 
-const components = (app: App) => {
-  app.use(ElementPlus)
+const components = async (app: App) => {
+  if (import.meta.env.DEV) {
+    app.use(ElementPlus)
+    await import('element-plus/dist/index.css')
+  }
   for (const [key, component] of Object.entries(CommonIcons)) {
     app.component(key, component)
   }
