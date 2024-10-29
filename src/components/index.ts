@@ -1,6 +1,5 @@
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import { App } from 'vue'
 import CommonDark from './common-dark/Index.vue'
@@ -19,11 +18,14 @@ import WidgetStatusFilter from './common-widget/StatusFilter.vue'
 import WidgetSubmit from './common-widget/Submit.vue'
 import WidgetUpdate from './common-widget/Update.vue'
 
-const components = (app: App) => {
+const components = async (app: App) => {
   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
   }
-  app.use(ElementPlus)
+  if (import.meta.env.DEV) {
+    app.use(ElementPlus)
+    await import('element-plus/dist/index.css')
+  }
   app.component('CommonDark', CommonDark)
   app.component('CommonLocale', CommonLocale)
   createDialog._context = app._context
