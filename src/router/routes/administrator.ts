@@ -9,6 +9,13 @@ const administrator: RouteRecordRaw = {
   component: () => import('@/components/common-layout/Index.vue'),
   children: [
     {
+      path: 'button',
+      meta: {
+        breadcrumb: '按钮列表'
+      },
+      component: () => import('@/views/administrator/button/Index.vue')
+    },
+    {
       path: 'menu',
       meta: {
         breadcrumb: '菜单列表'
