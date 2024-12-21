@@ -1,4 +1,5 @@
 import { Permission as RolePermission } from '@/views/administrator/role/permission'
+import { Permission as UserPermission } from '@/views/administrator/user/permission'
 import { RouteRecordRaw } from 'vue-router'
 
 const administrator: RouteRecordRaw = {
@@ -9,6 +10,32 @@ const administrator: RouteRecordRaw = {
   },
   component: () => import('@/components/common-layout/Index.vue'),
   children: [
+    {
+      path: 'user',
+      meta: {
+        breadcrumb: '用户列表'
+      },
+      component: () => import('@/views/administrator/user/Index.vue')
+    },
+    {
+      path: 'user/create',
+      meta: {
+        breadcrumb: '新建用户',
+        hideInMenu: true,
+        permissions: [UserPermission.Create]
+      },
+      component: () => import('@/views/administrator/user/Create.vue')
+    },
+    {
+      path: 'user/update',
+      meta: {
+        breadcrumb: '编辑用户',
+        hideInMenu: true,
+        permissions: [UserPermission.Update]
+      },
+      props: route => ({ id: route.query.id }),
+      component: () => import('@/views/administrator/user/Update.vue')
+    },
     {
       path: 'role',
       meta: {
