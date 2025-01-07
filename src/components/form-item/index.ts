@@ -1,0 +1,32 @@
+import {
+  ColInstance,
+  ElSelect,
+  FormItemInstance,
+  InputInstance
+} from 'element-plus'
+import { ComputedRef, VNode } from 'vue'
+
+export type Schema = {
+  stem?: string
+  extra?: boolean
+  colProps?: ColInstance['$props']
+  formItemProps?: FormItemInstance['$props']
+  children?: Schema[]
+} & (
+  | {
+      slot: string
+    }
+  | {
+      component: () => VNode
+    }
+  | {
+      tag: 'el-input'
+      tagProps?: InputInstance['$props']
+    }
+  | {
+      tag: 'el-select'
+      tagProps?: InstanceType<typeof ElSelect>['$props']
+      options?: ComputedRef<{ value: number | string; label: string }[]>
+      fetchOptions?: () => Promise<{ value: number | string; label: string }[]>
+    }
+)
