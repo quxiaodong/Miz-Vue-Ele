@@ -14,6 +14,8 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "build:dev": "vue-tsc -b && vite build --mode development",
+    "dev:mock": "vite --mode mock",
+    "build:mock": "NODE_ENV=production vue-tsc -b && vite build --mode mock",
     "preview": "vite preview"
   },
   "engines": {
@@ -63,6 +65,7 @@
     "eslint-plugin-vue": "^9.28.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
+    "msw": "^2.7.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",

@@ -37,7 +37,10 @@ const useSchemas = (): { schemas: Schema[] } => {
   const schemas: Schema[] = [
     {
       tag: 'ElInput',
-      tagProps: { prefixIcon: 'User' },
+      tagProps: {
+        prefixIcon: 'User',
+        placeholder: '账号: admin或guest 密码: 随便填'
+      },
       formItemProps: { prop: 'username' }
     },
     {
