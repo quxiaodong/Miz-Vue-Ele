@@ -9,6 +9,13 @@ const language: RouteRecordRaw = {
   component: () => import('@/components/common-layout/Index.vue'),
   children: [
     {
+      path: 'translation',
+      meta: {
+        breadcrumb: '翻译列表'
+      },
+      component: () => import('@/views/language/translation/Index.vue')
+    },
+    {
       path: 'locale',
       meta: {
         breadcrumb: '语言列表'
