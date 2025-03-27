@@ -2,6 +2,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import { App } from 'vue'
+import CommonCropper from './common-cropper/Index.vue'
 import CommonDark from './common-dark/Index.vue'
 import { createDialog } from './common-dialog/index'
 import CommonDialog from './common-dialog/Index.vue'
@@ -21,6 +22,7 @@ const components = (app: App) => {
   app.component('CommonDialog', CommonDialog)
   app.component('CommonForm', CommonForm)
   app.component('CommonSearch', CommonSearch)
+  app.component('CommonCropper', CommonCropper)
 }
 
 export default components

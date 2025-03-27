@@ -1,3 +1,4 @@
+import CommonCropper from '@/components/common-cropper/Index.vue'
 import CommonDark from '@/components/common-dark/Index.vue'
 import CommonDialog from '@/components/common-dialog/Index.vue'
 import CommonForm from '@/components/common-form/Index.vue'
@@ -11,5 +12,6 @@ declare module '@vue/runtime-core' {
     CommonDialog: typeof CommonDialog
     CommonForm: typeof CommonForm
     CommonSearch: typeof CommonSearch
+    CommonCropper: typeof CommonCropper
   }
 }
