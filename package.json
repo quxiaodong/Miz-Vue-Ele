@@ -9,6 +9,7 @@
     "url": "https://github.com/quxiaodong/Miz-Vue-Ele.git"
   },
   "scripts": {
+    "openapi": "npx swagger-typescript-api -p http://localhost:3000/swagger/json -o ./src/openapi/__generated__ -n index.ts --clean-output --no-client",
     "prepare": "husky",
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -28,14 +29,33 @@
     ]
   },
   "dependencies": {
-    "vue": "^3.5.12"
+    "@element-plus/icons-vue": "^2.3.1",
+    "@vueuse/core": "^11.1.0",
+    "axios": "^1.7.7",
+    "color": "^4.2.3",
+    "crypto-js": "^4.2.0",
+    "element-plus": "^2.8.4",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.2.4",
+    "qs": "^6.13.1",
+    "sortablejs": "^1.15.3",
+    "vue": "^3.5.12",
+    "vue-cropper": "^1.1.4",
+    "vue-i18n": "^10.0.4",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@eslint/js": "^9.11.1",
+    "@types/color": "^4.2.0",
+    "@types/crypto-js": "^4.2.2",
     "@types/eslint__js": "^8.42.3",
+    "@types/nprogress": "^0.2.3",
+    "@types/qs": "^6.9.17",
+    "@types/sortablejs": "^1.15.8",
     "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
@@ -46,6 +66,7 @@
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "swagger-typescript-api": "^13.0.22",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.8.0",
