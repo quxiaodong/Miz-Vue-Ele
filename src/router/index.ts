@@ -12,6 +12,17 @@ const router = createRouter({
       component: () => import('@/components/common-layout/Index.vue')
     },
     {
+      path: '/redirect',
+      component: () => import('@/components/common-layout/Index.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/redirect/Index.vue'),
+          props: to => ({ redirect: to.query.redirect })
+        }
+      ]
+    },
+    {
       path: '/:pathMatch(.*)*',
       component: () => import('@/views/404/Index.vue')
     }
